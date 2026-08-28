@@ -6,8 +6,8 @@
 <title>English-Speaking Electricians in the Algarve | Algarve Electric</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;600;700;800;900&amp;family=Public+Sans:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap">
- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;600;700;800;900&amp;family=Public+Sans:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600;700&amp;display=swap">
+ <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap">
  <style>
   /* ═══════════════════════════════════════════════
    RESET
@@ -17,9 +17,9 @@ html { width: 100%; }
 body {
   width: 100%; max-width: 100%; overflow-x: hidden;
   margin: 0; padding: 0;
-  font-family: 'Public Sans', sans-serif;
-  background: #EDE6D3;
-  color: #26211A !important;
+  font-family: 'Barlow', sans-serif;
+  background: #12141A;
+  color: #F5F3EC !important;
   -webkit-font-smoothing: antialiased;
   counter-reset: figslot secn;
 }
@@ -30,25 +30,28 @@ body {
    earth/green-yellow → olive. Used functionally, not decoratively.
 ═══════════════════════════════════════════════ */
 :root {
-  --plaster:       #EDE6D3;
-  --plaster-2:     #E4D9BF;
-  --panel:         #F4EFE1;
-  --ink:           #26211A;
-  --ink-soft:      #4E4432;
-  --ink-faint:     #8B7D63;
-  --line:          #CBB98F;
-  --live:          #A8391F;
-  --live-deep:     #8A2E18;
-  --live-soft:     #F1DACF;
-  --neutral:       #23496B;
-  --neutral-soft:  #DCE4EA;
-  --earth:         #5F6B27;
-  --earth-soft:    #E3E6C9;
-  --radius:        10px;
+  --plaster:       #12141A;
+  --plaster-2:     #1B1E27;
+  --panel:         #21242F;
+  --ink:           #F5F3EC;
+  --ink-soft:      #C7C9D1;
+  --ink-faint:     #7C7F8A;
+  --line:          #333743;
+  --live:          #F4C400;
+  --live-deep:     #D6AC00;
+  --live-soft:     #332B12;
+  --neutral:       #4FA3E3;
+  --neutral-soft:  #1B2A34;
+  --earth:         #4FA3E3;
+  --earth-soft:    #1B2A34;
+  --danger:        #FF4433;
+  --danger-deep:   #D6321F;
+  --danger-soft:   #33201C;
+  --radius:        6px;
   --t:             0.22s ease;
   --px:            20px;
 }
-h1, h2, h3, h4, .logo { font-family: 'Big Shoulders', sans-serif !important; text-transform: uppercase; }
+h1, h2, h3, h4, .logo { font-family: 'Anton', sans-serif !important; text-transform: uppercase; font-weight: 400 !important; letter-spacing: 0.005em; }
 a { text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* ═══════════════════════════════════════════════
@@ -77,7 +80,7 @@ nav {
   transform: translateZ(0);
 }
 nav.scrolled {
-  background: rgba(237,230,211,0.95) !important;
+  background: rgba(18,20,26,0.92) !important;
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line) !important;
@@ -89,7 +92,7 @@ nav.scrolled {
 .logo { font-size: 1.4rem; font-weight: 700; letter-spacing: 0.01em; color: var(--ink) !important; }
 .logo span { color: var(--live) !important; }
 .nav-phone-mobile {
-  color: var(--live) !important; font-family: 'IBM Plex Mono', monospace;
+  color: var(--live) !important; font-family: 'JetBrains Mono', monospace;
   font-weight: 600; font-size: 0.9rem; letter-spacing: -0.01em;
   white-space: nowrap; margin-left: 2rem; margin-right: 2rem;
 }
@@ -178,7 +181,7 @@ nav.scrolled {
 .nav-links a { color: var(--ink) !important; font-size: 1rem; font-weight: 500; letter-spacing: 0.02em; transition: color var(--t); }
 .nav-links a:hover { color: var(--live) !important; }
 .nav-links a.nav-phone-desktop {
-  color: var(--live) !important; font-family: 'IBM Plex Mono', monospace;
+  color: var(--live) !important; font-family: 'JetBrains Mono', monospace;
   font-weight: 600; font-size: 0.9rem !important; letter-spacing: -0.01em;
 }
 .nav-links a.nav-phone-desktop:hover { color: var(--live-deep) !important; }
@@ -225,7 +228,7 @@ nav.scrolled {
 }
 .hero-content { position: relative; z-index: 2; width: 100%; text-align: center; }
 .hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 48px; align-items: center; }
-.hero-rating { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 18px; text-transform: uppercase; }
+.hero-rating { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--ink-faint); margin-bottom: 18px; text-transform: uppercase; }
 .hero h1 {
   font-size: clamp(2.3rem, 7.8vw, 3.8rem) !important;
   font-weight: 800; line-height: 0.98 !important;
@@ -239,20 +242,20 @@ nav.scrolled {
 .hero-desc {
   line-height: 1.7 !important; color: var(--ink-soft) !important;
   font-weight: 400 !important; max-width: 480px; margin: 0 auto 30px;
-  font-size: 1.2rem; font-family: 'Public Sans', sans-serif; text-transform: none;
+  font-size: 1.2rem; font-family: 'Barlow', sans-serif; text-transform: none;
 }
 .hero-actions { display: flex; justify-content: center; gap: 14px; margin-bottom: 28px; }
 .btn-primary {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   background: var(--live); color: var(--panel) !important;
   width: min(320px, 82%); padding: 17px 0; border-radius: 6px;
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: 'JetBrains Mono', monospace !important;
   font-weight: 600 !important; font-size: 1.02rem !important;
   letter-spacing: 0.01em; text-align: center;
   transition: background var(--t), transform var(--t), box-shadow var(--t);
-  box-shadow: 0 4px 24px rgba(168,57,31,0.22);
+  box-shadow: 0 4px 24px rgba(244,196,0,0.18);
 }
-.btn-primary:hover { background: var(--live-deep) !important; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(168,57,31,0.32); }
+.btn-primary:hover { background: var(--live-deep) !important; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(244,196,0,0.28); }
 .hero-stats {
   display: flex; background: var(--panel);
   border: 1px solid var(--line); border-radius: 8px;
@@ -260,7 +263,7 @@ nav.scrolled {
 }
 .stat-item { flex: 1; min-width: 0; text-align: center; padding: 0 10px; border-right: 1px solid var(--line); }
 .stat-item:last-child { border-right: none; }
-.stat-num { font-family: 'IBM Plex Mono', monospace !important; font-size: 1.05rem !important; font-weight: 700 !important; color: var(--ink) !important; line-height: 1.1; word-break: break-word; }
+.stat-num { font-family: 'JetBrains Mono', monospace !important; font-size: 1.05rem !important; font-weight: 700 !important; color: var(--ink) !important; line-height: 1.1; word-break: break-word; }
 .stat-lbl { font-size: 0.62rem !important; color: var(--ink-faint) !important; margin-top: 6px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; }
 .fu { opacity:0; transform:translateY(22px); animation: fu 0.55s ease forwards; }
 .fu:nth-child(1){animation-delay:0.05s;} .fu:nth-child(2){animation-delay:0.15s;}
@@ -270,7 +273,7 @@ nav.scrolled {
 
 /* breaker-panel hero graphic */
 .panel-wrap { position: relative; z-index: 2; background: var(--plaster-2); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
-.panel-cap { display: flex; justify-content: space-between; font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; color: var(--ink-faint); margin-top: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+.panel-cap { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; color: var(--ink-faint); margin-top: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* ═══════════════════════════════════════════════
    TRUST BAR
@@ -292,15 +295,16 @@ nav.scrolled {
    SHARED
 ═══════════════════════════════════════════════ */
 .py-section { padding: 72px 0; }
+/* No badge — plain mono label with a short colour dash, not a pill */
 .lbl {
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  display: block;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--ink-faint) !important; margin-bottom: 16px;
-  font-family: 'IBM Plex Mono', monospace; background: var(--panel);
-  border: 1px solid var(--line); padding: 6px 12px 6px 10px; border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace; background: none;
+  border: none; padding: 0 0 0 22px; border-radius: 0; position: relative;
 }
-.lbl::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--neutral); flex-shrink: 0; }
-.lbl::after { counter-increment: secn; content: " · \00A7" counter(secn, decimal-leading-zero); color: var(--ink-faint); font-weight: 500; }
+.lbl::before { content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 14px; height: 3px; background: var(--live); }
+.lbl::after { counter-increment: secn; content: " \2014 \00A7" counter(secn, decimal-leading-zero); color: var(--ink-faint); font-weight: 500; }
 /* recurring circuit-trace divider — the page's one small signature motif, used where two sections share a background */
 .trace-divider { display: flex; justify-content: center; padding: 8px 0; background: inherit; }
 .trace-divider svg { display: block; }
@@ -313,7 +317,7 @@ nav.scrolled {
 .intro-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
 .intro-text p { font-size: 1rem; color: var(--ink-soft); line-height: 1.85; font-weight: 400; margin-bottom: 16px; }
 .intro-text p:first-of-type::first-letter {
-  font-family: 'Big Shoulders', sans-serif; font-weight: 800;
+  font-family: 'Anton', sans-serif; font-weight: 800;
   font-size: 3.6em; line-height: 0.78; float: left;
   padding: 4px 8px 0 0; color: var(--live);
 }
@@ -389,7 +393,7 @@ nav.scrolled {
   counter-increment: figp;
   content: "FIG. " counter(figp, decimal-leading-zero);
   position: absolute; top: 20px; left: 20px; z-index: 2;
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
   background: var(--panel); border: 1px solid var(--line); color: var(--ink-faint);
   padding: 3px 7px; border-radius: 3px;
 }
@@ -429,27 +433,27 @@ nav.scrolled {
   counter-increment: fig;
   content: counter(fig, decimal-leading-zero);
   grid-column: 1; grid-row: 1 / 3;
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.8rem;
   color: var(--ink-faint); align-self: center;
 }
 .card::after {
   content: "→";
   grid-column: 4; grid-row: 1 / 3;
-  font-family: 'IBM Plex Mono', monospace; font-size: 1.15rem;
+  font-family: 'JetBrains Mono', monospace; font-size: 1.15rem;
   color: var(--ink-faint); justify-self: end; align-self: center;
   transition: transform var(--t), color var(--t);
 }
 .card:hover::after { color: var(--live); transform: translateX(3px); }
 .card h3 { grid-column: 3; grid-row: 1; font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; color: var(--ink) !important; line-height: 1.15; letter-spacing: 0; }
-.card p { grid-column: 3; grid-row: 2; font-size: 0.9rem; color: var(--ink-soft) !important; line-height: 1.6; text-transform: none; font-family: 'Public Sans', sans-serif; }
-.card-tag { color: var(--live); font-family: 'IBM Plex Mono', monospace; font-size: 0.65em; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 8px; }
-/* the one row that stays permanently "live" — echoes the hero's lit breaker, a deliberate rest point in the list */
+.card p { grid-column: 3; grid-row: 2; font-size: 0.9rem; color: var(--ink-soft) !important; line-height: 1.6; text-transform: none; font-family: 'Barlow', sans-serif; }
+.card-tag { color: var(--danger); font-family: 'JetBrains Mono', monospace; font-size: 0.65em; text-transform: uppercase; letter-spacing: 0.04em; margin-right: 8px; }
+/* the one row that stays permanently "live" — echoes the hero's lit breaker, a deliberate rest point in the list. Danger red, not the CTA yellow: this is the one genuinely urgent row. */
 .card--featured {
-  background: var(--live-soft); border-left-color: var(--live);
+  background: var(--danger-soft); border-left-color: var(--danger);
   padding-top: 26px; padding-bottom: 26px;
 }
 .card--featured h3 { font-size: 1.2rem; }
-.card--featured::after { color: var(--live); }
+.card--featured::after { color: var(--danger); }
 /* ═══════════════════════════════════════════════
    IMAGE SLOTS — reframed as documentation exhibits, not full-bleed photos
 ═══════════════════════════════════════════════ */
@@ -467,7 +471,7 @@ nav.scrolled {
   counter-increment: figslot;
   content: "FIG. " counter(figslot, decimal-leading-zero);
   position: absolute; top: 20px; left: 20px; z-index: 2;
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
   background: var(--panel); border: 1px solid var(--line); color: var(--ink-faint);
   padding: 3px 7px; border-radius: 3px;
 }
@@ -487,7 +491,7 @@ nav.scrolled {
   counter-increment: annot;
   content: counter(annot, decimal-leading-zero);
   grid-column: 1;
-  font-family: 'Big Shoulders', sans-serif; font-weight: 700;
+  font-family: 'Anton', sans-serif; font-weight: 700;
   font-size: 2.3rem; color: var(--line); line-height: 1;
 }
 /* the certification row carries the earth/verified colour — the one functional use of that accent here */
@@ -495,16 +499,16 @@ nav.scrolled {
 .why-check { display: none; }
 .why-item > div:last-child { grid-column: 2; border-left: 1px solid var(--line); padding-left: 24px; }
 .why-item h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 6px; color: var(--ink) !important; line-height: 1.15; }
-.why-item p { font-size: 0.95rem; color: var(--ink-soft) !important; line-height: 1.7; text-transform: none; font-family: 'Public Sans', sans-serif; }
+.why-item p { font-size: 0.95rem; color: var(--ink-soft) !important; line-height: 1.7; text-transform: none; font-family: 'Barlow', sans-serif; }
 .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 48px; overflow: hidden; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); }
 .metric { background: var(--panel); border-top: none; border-radius: 0; padding: 18px 12px; text-align: center; min-width: 0; overflow: hidden; }
-.metric-num { font-family: 'IBM Plex Mono', monospace !important; font-weight: 700; color: var(--live) !important; line-height: 1; word-break: break-word; font-size: 1.1rem; text-transform: uppercase; }
-.metric-lbl { font-size: clamp(0.6rem, 1.8vw, 0.72rem); color: var(--ink-faint) !important; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; word-break: break-word; font-family: 'IBM Plex Mono', monospace; }
+.metric-num { font-family: 'JetBrains Mono', monospace !important; font-weight: 700; color: var(--live) !important; line-height: 1; word-break: break-word; font-size: 1.1rem; text-transform: uppercase; }
+.metric-lbl { font-size: clamp(0.6rem, 1.8vw, 0.72rem); color: var(--ink-faint) !important; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; word-break: break-word; font-family: 'JetBrains Mono', monospace; }
 .why-img-desktop { position: relative; }
 .why-img-desktop::before {
   content: "JOBSITE — OLHÃO";
   position: absolute; top: 16px; left: 16px; z-index: 2;
-  font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
+  font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.04em;
   background: var(--panel); border: 1px solid var(--line); color: var(--ink-faint);
   padding: 3px 7px; border-radius: 3px;
 }
@@ -521,7 +525,7 @@ nav.scrolled {
   background: transparent; border: none; border-bottom: 1px solid var(--line);
   border-radius: 0; padding: 13px 4px; text-align: left;
   font-size: 0.85rem; color: var(--ink-soft) !important; font-weight: 600;
-  font-family: 'IBM Plex Mono', monospace; transition: color var(--t), background var(--t);
+  font-family: 'JetBrains Mono', monospace; transition: color var(--t), background var(--t);
 }
 .town::after { content: ""; flex: 1; border-bottom: 1px dotted var(--ink-faint); margin: 0 0 4px 10px; transition: border-color var(--t); }
 .town:hover { color: var(--live) !important; background: var(--panel); }
@@ -532,7 +536,7 @@ nav.scrolled {
    CONTACT
 ═══════════════════════════════════════════════ */
 .contact-bg { background: var(--plaster); }
-.contact-phone-num { display: inline-flex; align-items: center; gap: 12px; font-family: 'IBM Plex Mono', monospace !important; font-size: clamp(1.6rem, 5.6vw, 2.1rem); font-weight: 700; color: var(--live) !important; letter-spacing: -0.01em; margin: 24px 0 8px; }
+.contact-phone-num { display: inline-flex; align-items: center; gap: 12px; font-family: 'JetBrains Mono', monospace !important; font-size: clamp(1.6rem, 5.6vw, 2.1rem); font-weight: 700; color: var(--live) !important; letter-spacing: -0.01em; margin: 24px 0 8px; }
 .contact-phone-num svg { width: 22px; height: 22px; stroke: var(--live); fill: none; stroke-width: 1.8; flex-shrink: 0; }
 .contact-sub-note { font-size: 0.95rem; color: var(--ink-faint) !important; margin-bottom: 32px; line-height: 1.6; }
 .contact-detail { display: flex; align-items: flex-start; gap: 16px; background: transparent; border: none; border-top: 1px solid var(--line); border-radius: 0; padding: 20px 4px; margin-bottom: 0; }
@@ -554,7 +558,7 @@ nav.scrolled {
 .faq-question {
   width: 100%; background: none; border: none; padding: 20px 6px; text-align: left;
   display: grid; grid-template-columns: 30px 1fr 22px; align-items: center; column-gap: 14px;
-  cursor: pointer; color: var(--ink) !important; font-family: 'IBM Plex Mono', monospace;
+  cursor: pointer; color: var(--ink) !important; font-family: 'JetBrains Mono', monospace;
   font-weight: 600; font-size: 0.9rem; line-height: 1.4;
 }
 .faq-question::before { counter-increment: faqn; content: counter(faqn, decimal-leading-zero); color: var(--ink-faint); font-weight: 500; }
@@ -569,12 +573,12 @@ nav.scrolled {
 ═══════════════════════════════════════════════ */
 .footer-bg { background: var(--plaster-2); border-top: 1px solid var(--line); }
 .footer-inner { padding: 40px 0; text-align: center; }
-.footer-logo { font-family: 'IBM Plex Mono', monospace !important; font-weight: 700; font-size: 1.05rem; color: var(--ink) !important; margin-bottom: 18px; }
+.footer-logo { font-family: 'JetBrains Mono', monospace !important; font-weight: 700; font-size: 1.05rem; color: var(--ink) !important; margin-bottom: 18px; }
 .footer-logo span { color: var(--live) !important; }
 .footer-links { display: flex; justify-content: center; gap: 24px; list-style: none; margin-bottom: 18px; flex-wrap: wrap; }
 .footer-links a, .footer-links a:visited { font-size: 0.85rem; color: var(--ink-faint) !important; transition: color var(--t); }
 .footer-links a:hover, .footer-links a:visited:hover { color: var(--live) !important; }
-.footer-copy { font-size: 0.78rem; color: var(--ink-faint) !important; line-height: 1.6; font-family: 'IBM Plex Mono', monospace; }
+.footer-copy { font-size: 0.78rem; color: var(--ink-faint) !important; line-height: 1.6; font-family: 'JetBrains Mono', monospace; }
 /* ═══════════════════════════════════════════════
    WHATSAPP — untouched, do not restyle
 ═══════════════════════════════════════════════ */
@@ -777,7 +781,7 @@ nav.scrolled {
     <div class="hero-content">
      <div class="hero-rating fu">Algarve Electric — Distribution Board, Residential</div>
      <h1 class="fu">
-      <span style="font-weight: 800;">
+      <span>
        English-Speaking
       </span>
       <br>
@@ -785,7 +789,7 @@ nav.scrolled {
        Electricians
       </em>
       <br>
-      <span style="font-weight: 800;">
+      <span>
        in the Algarve
       </span>
      </h1>
@@ -832,14 +836,14 @@ nav.scrolled {
      <svg viewBox="0 0 560 340" width="100%" role="img" aria-label="Distribution board illustration with six labelled breaker switches: Emergency, Rewiring, Solar, AC Units, Security, Inspections">
       <rect x="6" y="6" width="548" height="328" rx="10" fill="none" stroke="var(--line)" stroke-width="2"/>
       <line x1="34" y1="46" x2="526" y2="46" stroke="var(--ink-faint)" stroke-width="3"/>
-      <text x="34" y="30" font-family="IBM Plex Mono, monospace" font-size="11" fill="var(--ink-faint)" letter-spacing="1">MAIN SUPPLY — 63A</text>
+      <text x="34" y="30" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--ink-faint)" letter-spacing="1">MAIN SUPPLY — 63A</text>
 
       <g>
        <line x1="76" y1="46" x2="76" y2="80" stroke="var(--ink-faint)" stroke-width="2"/>
-       <rect x="56" y="80" width="40" height="56" rx="4" fill="var(--live-soft)" stroke="var(--live)" stroke-width="2.5"/>
-       <rect x="64" y="88" width="24" height="18" rx="2" fill="var(--live)"/>
+       <rect x="56" y="80" width="40" height="56" rx="4" fill="var(--danger-soft)" stroke="var(--danger)" stroke-width="2.5"/>
+       <rect x="64" y="88" width="24" height="18" rx="2" fill="var(--danger)"/>
        <rect x="46" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="76" y="169" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--live-deep)" text-anchor="middle" font-weight="600">EMERGENCY</text>
+       <text x="76" y="169" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--danger)" text-anchor="middle" font-weight="600">EMERGENCY</text>
       </g>
 
       <g>
@@ -847,7 +851,7 @@ nav.scrolled {
        <rect x="136" y="80" width="40" height="56" rx="4" fill="var(--panel)" stroke="var(--ink-faint)" stroke-width="2"/>
        <rect x="144" y="108" width="24" height="18" rx="2" fill="var(--ink-faint)"/>
        <rect x="126" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="156" y="169" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">REWIRING</text>
+       <text x="156" y="169" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">REWIRING</text>
       </g>
 
       <g>
@@ -855,7 +859,7 @@ nav.scrolled {
        <rect x="216" y="80" width="40" height="56" rx="4" fill="var(--panel)" stroke="var(--ink-faint)" stroke-width="2"/>
        <rect x="224" y="108" width="24" height="18" rx="2" fill="var(--ink-faint)"/>
        <rect x="206" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="236" y="169" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">SOLAR</text>
+       <text x="236" y="169" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">SOLAR</text>
       </g>
 
       <g>
@@ -863,7 +867,7 @@ nav.scrolled {
        <rect x="296" y="80" width="40" height="56" rx="4" fill="var(--panel)" stroke="var(--ink-faint)" stroke-width="2"/>
        <rect x="304" y="108" width="24" height="18" rx="2" fill="var(--ink-faint)"/>
        <rect x="286" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="316" y="169" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">AC UNITS</text>
+       <text x="316" y="169" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">AC UNITS</text>
       </g>
 
       <g>
@@ -871,7 +875,7 @@ nav.scrolled {
        <rect x="376" y="80" width="40" height="56" rx="4" fill="var(--panel)" stroke="var(--ink-faint)" stroke-width="2"/>
        <rect x="384" y="108" width="24" height="18" rx="2" fill="var(--ink-faint)"/>
        <rect x="366" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="396" y="169" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">SECURITY</text>
+       <text x="396" y="169" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">SECURITY</text>
       </g>
 
       <g>
@@ -879,15 +883,15 @@ nav.scrolled {
        <rect x="456" y="80" width="40" height="56" rx="4" fill="var(--panel)" stroke="var(--ink-faint)" stroke-width="2"/>
        <rect x="464" y="108" width="24" height="18" rx="2" fill="var(--ink-faint)"/>
        <rect x="446" y="150" width="60" height="30" rx="3" fill="var(--panel)" stroke="var(--line)" stroke-width="1.5"/>
-       <text x="476" y="169" font-family="IBM Plex Mono, monospace" font-size="8.5" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">INSPECTIONS</text>
+       <text x="476" y="169" font-family="JetBrains Mono, monospace" font-size="8.5" fill="var(--ink-soft)" text-anchor="middle" font-weight="600">INSPECTIONS</text>
       </g>
 
       <line x1="46" y1="200" x2="516" y2="200" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="2 5"/>
-      <text x="46" y="225" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">LICENSED ELECTRICIAN</text>
-      <text x="46" y="242" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">COVERAGE — ALGARVE, FULL REGION</text>
-      <text x="46" y="259" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--ink-faint)">LANGUAGE — ENGLISH, 100%</text>
+      <text x="46" y="225" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink-faint)">LICENSED ELECTRICIAN</text>
+      <text x="46" y="242" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink-faint)">COVERAGE — ALGARVE, FULL REGION</text>
+      <text x="46" y="259" font-family="JetBrains Mono, monospace" font-size="10" fill="var(--ink-faint)">LANGUAGE — ENGLISH, 100%</text>
       <rect x="440" y="212" width="76" height="24" rx="3" fill="none" stroke="var(--earth)" stroke-width="1.5"/>
-      <text x="478" y="228" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--earth)" text-anchor="middle" font-weight="600">VERIFIED</text>
+      <text x="478" y="228" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--earth)" text-anchor="middle" font-weight="600">VERIFIED</text>
      </svg>
      <div class="panel-cap">
       <span>Fig. 01 — Hero panel, hand-drawn</span>
@@ -1321,7 +1325,7 @@ nav.scrolled {
     </p>
    </div>
    <div class="prose-block">
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 8px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 8px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Lights, Switches and Outdoor Electrics Not Working
     </h3>
     <p>
@@ -1355,7 +1359,7 @@ nav.scrolled {
     <figure class="prose-img">
      <img src="https://irp.cdn-website.com/ee59f95d/dms3rep/multi/villa-rewiring-desktop.webp" alt="Open consumer unit with circuit breakers inspected to Portuguese electrical standards">
     </figure>
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 48px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 48px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Electric Gate Faults and Motor Repairs
     </h3>
     <p>
@@ -1376,7 +1380,7 @@ nav.scrolled {
     <figure class="prose-img">
      <img src="https://irp.cdn-website.com/ee59f95d/dms3rep/multi/consumer-unit-repair-desktop.webp" alt="Algarve villa consumer unit showing MCB circuit breakers">
     </figure>
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 48px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 48px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Dead Sockets, Bathroom Faults and Intercom Problems
     </h3>
     <p>
@@ -1409,7 +1413,7 @@ nav.scrolled {
     <figure class="prose-img">
      <img src="https://irp.cdn-website.com/ee59f95d/dms3rep/multi/electrical-repairs-almancil.webp" alt="Exposed wiring and consumer unit in older Algarve property">
     </figure>
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 48px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 48px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Fuse Box Tripping, Power Surges and AC Problems
     </h3>
     <p>
@@ -1458,7 +1462,7 @@ nav.scrolled {
     <figure class="prose-img">
      <img src="https://irp.cdn-website.com/ee59f95d/dms3rep/multi/solar-panels-installed-quarteira.webp" alt="Solar panels installed on rooftop in the Algarve by certified electrician">
     </figure>
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 48px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 48px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Burning Smells, Exposed Wiring and Electrical Emergencies
     </h3>
     <p>
@@ -1500,7 +1504,7 @@ nav.scrolled {
     <figure class="prose-img">
      <img src="https://irp.cdn-website.com/ee59f95d/dms3rep/multi/power-socket-installation-algarve-portugal.webp" alt="Portuguese plug sockets in Algarve property inspected by a certified electrician">
     </figure>
-    <h3 style="font-size: 1.7rem; font-weight: 700; letter-spacing: 0; color: #26211A; margin-bottom: 16px; margin-top: 48px; font-family: 'Big Shoulders', sans-serif; text-transform: uppercase;">
+    <h3 style="font-size: 1.7rem; font-weight: 400; letter-spacing: 0; color: #F5F3EC; margin-bottom: 16px; margin-top: 48px; font-family: 'Anton', sans-serif; text-transform: uppercase;">
      Buying or Moving Into an Algarve Property
     </h3>
     <p>
