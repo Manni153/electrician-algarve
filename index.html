@@ -25,14 +25,17 @@ body {
 /* ═══════════════════════════════════════════════
    DESIGN TOKENS — editorial-photographic, mostly light: white/pale-grey
    content sections punctuated by full-bleed dark photography, one clean
-   sans typeface throughout, sharp edges, lime as the one small accent.
+   sans typeface throughout, sharp edges. Lime stays the one CTA/action
+   colour (slightly softened); the Owala-bottle periwinkle is the quiet
+   second accent for labels, links and small in-page moments.
 ═══════════════════════════════════════════════ */
 :root {
-  --purple:   #6B21D4;
-  --lime:     #C8F400;
-  --lime-dim: #a8cc00;
+  --periwinkle:      #525C9C;
+  --periwinkle-soft: #8B93C6;
+  --lime:     #C2E619;
+  --lime-dim: #a3c214;
   --paper:    #FFFFFF;
-  --paper-2:  #F5F4F2;
+  --paper-2:  #F4F4FA;
   --ink:      #14121A;
   --ink-soft: #55525E;
   --muted:    #86828E;
@@ -121,7 +124,7 @@ nav.scrolled {
 .reviews-slide img { width: 100%; height: auto; border-radius: var(--radius); display: block; }
 .reviews-dots { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
 .reviews-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--line); border: none; cursor: pointer; padding: 0; transition: background 0.22s ease; }
-.reviews-dot.active { background: var(--ink); }
+.reviews-dot.active { background: var(--periwinkle); }
 .reviews-grid-desktop { display: none; }
 @media (min-width: 768px) {
   .reviews-carousel-outer { display: none; }
@@ -133,7 +136,7 @@ nav.scrolled {
 .why-img-desktop { display: none; }
 .nav-links { display: none; list-style: none; align-items: center; gap: 32px; }
 .nav-links a { color: var(--ink) !important; font-family: var(--f-body); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.01em; transition: color var(--t); }
-.nav-links a:hover { color: var(--muted) !important; }
+.nav-links a:hover { color: var(--periwinkle) !important; }
 .nav-links a.nav-phone-desktop {
   color: var(--ink) !important; font-family: var(--f-body);
   font-weight: 700; font-size: 0.9rem !important; letter-spacing: 0;
@@ -208,7 +211,7 @@ nav.scrolled {
 ═══════════════════════════════════════════════ */
 .py-section { padding: var(--sp-5) 0; }
 @media (min-width: 768px) { .py-section { padding: 96px 0; } }
-.lbl { display: block; font-family: var(--f-body); font-weight: 700; font-size: 0.72rem; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted) !important; margin-bottom: var(--sp-2); }
+.lbl { display: block; font-family: var(--f-body); font-weight: 700; font-size: 0.72rem; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--periwinkle) !important; margin-bottom: var(--sp-2); }
 .h2 { margin-bottom: 0; }
 .sub { font-family: var(--f-body); font-size: 1.05rem; color: var(--ink-soft) !important; line-height: 1.8; font-weight: 300; max-width: 68ch; margin-top: var(--sp-3); }
 /* ═══════════════════════════════════════════════
@@ -222,8 +225,8 @@ nav.scrolled {
 /* ═══════════════════════════════════════════════
    CONTEXTUAL LINK STYLE
 ═══════════════════════════════════════════════ */
-.ctx-link { font-family: var(--f-body); color: var(--ink) !important; text-decoration: underline; text-decoration-color: rgba(20,18,26,0.3); text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 600; transition: color var(--t), text-decoration-color var(--t); }
-.ctx-link:hover { color: var(--ink) !important; text-decoration-color: var(--ink); }
+.ctx-link { font-family: var(--f-body); color: var(--ink) !important; text-decoration: underline; text-decoration-color: var(--periwinkle); text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 600; transition: color var(--t), text-decoration-color var(--t); }
+.ctx-link:hover { color: var(--periwinkle) !important; text-decoration-color: var(--periwinkle); }
 /* ═══════════════════════════════════════════════
    SERVICES — photo-led category cards
 ═══════════════════════════════════════════════ */
@@ -280,9 +283,9 @@ nav.scrolled {
 .towns { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-bottom: 32px; }
 .town { display: flex; align-items: center; justify-content: center; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 12px 14px; text-align: center; font-family: var(--f-body); font-size: 0.88rem; color: var(--ink-soft) !important; font-weight: 500; transition: border-color var(--t), color var(--t), background var(--t); }
 .town .town-arrow { display: none; }
-.town:hover { border-color: var(--ink); color: var(--ink) !important; background: #fff; }
+.town:hover { border-color: var(--periwinkle); color: var(--periwinkle) !important; background: #fff; }
 .coverage-note { text-align: center; font-size: 0.95rem; color: var(--muted) !important; line-height: 1.7; font-family: var(--f-body); max-width: 68ch; margin: 0 auto; }
-.coverage-note a { color: var(--ink) !important; font-weight: 600; text-decoration: underline; }
+.coverage-note a { color: var(--periwinkle) !important; font-weight: 600; text-decoration: underline; }
 /* ═══════════════════════════════════════════════
    CONTACT — plain, on white
 ═══════════════════════════════════════════════ */
@@ -316,7 +319,7 @@ nav.scrolled {
 .faq-item.open .faq-answer { display: block; animation: faqFade 0.4s ease; }
 @media (prefers-reduced-motion: reduce) { .faq-item.open .faq-answer { animation: none; } }
 @keyframes faqFade { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
-.faq-answer a { color: var(--ink); text-decoration: underline; }
+.faq-answer a { color: var(--periwinkle); text-decoration: underline; }
 /* ═══════════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════════ */
@@ -326,7 +329,7 @@ nav.scrolled {
 .footer-logo span { color: var(--ink) !important; font-weight: 400; }
 .footer-links { display: flex; justify-content: center; gap: 24px; list-style: none; margin-bottom: 18px; flex-wrap: wrap; }
 .footer-links a, .footer-links a:visited { font-family: var(--f-body); font-size: 0.85rem; color: var(--muted) !important; transition: color var(--t); }
-.footer-links a:hover, .footer-links a:visited:hover { color: var(--ink) !important; }
+.footer-links a:hover, .footer-links a:visited:hover { color: var(--periwinkle) !important; }
 .footer-copy { font-family: var(--f-body); font-size: 0.8rem; color: var(--muted) !important; line-height: 1.6; }
 /* ═══════════════════════════════════════════════
    WHATSAPP — untouched, do not restyle
