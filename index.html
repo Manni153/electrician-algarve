@@ -156,11 +156,11 @@ nav.scrolled {
    HERO — full-bleed photo, subtle bottom scrim, text sits low and
    left, echoing the product-photography hero on marklevinson.com.
 ═══════════════════════════════════════════════ */
-.hero { position: relative; display: flex; align-items: flex-end; height: 100svh; min-height: 100svh; padding: 0; }
+.hero { position: relative; display: flex; align-items: center; height: 100svh; min-height: 100svh; padding: 0; }
 .hero-photo { position: absolute; inset: 0; z-index: 0; }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; background: linear-gradient(135deg, #2a2140, #0B0A10); }
-.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(6,5,10,0.72) 0%, rgba(6,5,10,0.15) 42%, rgba(6,5,10,0) 60%); }
-.hero-panel { position: relative; z-index: 2; width: 100%; padding: 0 0 var(--sp-6); }
+.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(6,5,10,0.72) 0%, rgba(6,5,10,0.55) 35%, rgba(6,5,10,0.4) 55%, rgba(6,5,10,0.12) 78%, rgba(6,5,10,0) 95%); }
+.hero-panel { position: relative; z-index: 2; width: 100%; padding: 0; }
 .hero-panel-inner { position: relative; z-index: 2; width: 100%; padding: 0 var(--px); max-width: 620px; text-align: left; margin: 0; }
 .hero h1 {
   font-family: var(--f-display) !important; font-weight: 400 !important;
@@ -412,8 +412,8 @@ nav.scrolled {
   .hero-desc { font-size: 1.15rem; }
   .towns { grid-template-columns: repeat(5,1fr); }
   .metric-grid { grid-template-columns: repeat(4,1fr); }
-  .metric { padding: var(--sp-4) var(--sp-3); }
-  .metric-num { font-size: 1.5rem !important; }
+  .metric { padding: 28px 16px; }
+  .metric-num { font-size: 1.05rem !important; }
   .contact-grid { display: block; }
   .contact-left-col { margin-bottom: 0; }
   .img-slot-inner.h-md { height: 560px; }
