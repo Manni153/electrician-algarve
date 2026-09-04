@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English-Speaking Electrician in the Algarve</title>
-<meta name="description" content="Lights out? Fuse tripping? An English-speaking electrician serving the Algarve — clear communication, fast response, and reliable work you can trust.">
-<meta property="og:title" content="English-Speaking Electrician in the Algarve">
-<meta property="og:description" content="Lights out? Fuse tripping? An English-speaking electrician serving the Algarve — clear communication, fast response, and reliable work you can trust.">
+<title>Electrician in Faro | Algarve Electric</title>
+<meta name="description" content="English-speaking electrician serving Faro and the surrounding Algarve — fast response, clear communication, reliable work.">
+<meta property="og:title" content="Electrician in Faro | Algarve Electric">
+<meta property="og:description" content="English-speaking electrician serving Faro and the surrounding Algarve — fast response, clear communication, reliable work.">
 <meta property="og:image" content="https://www.electricianalgarve.com/electrician-work-done-algarve-mobile.webp">
-<link rel="canonical" href="https://www.electricianalgarve.com/" />
+<link rel="canonical" href="https://www.electricianalgarve.com/faro" />
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -32,16 +32,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 /* ═══════════════════════════════════════════════
-   DESIGN TOKENS — editorial-photographic, mostly light: white/pale-grey
-   content sections punctuated by full-bleed dark photography, one clean
-   sans typeface throughout, sharp edges. Lime stays the one CTA/action
-   colour (slightly softened); the Owala-bottle periwinkle is the quiet
-   second accent for labels, links and small in-page moments.
+   DESIGN TOKENS — identical to homepage
 ═══════════════════════════════════════════════ */
 :root {
   --periwinkle:      #525C9C;
   --periwinkle-soft: #8B93C6;
-  --periwinkle-2:    #7C8CE0; /* voltage-mark accent: CTA hover fill + second logo bar only */
+  --periwinkle-2:    #7C8CE0;
   --lime:     #C2E619;
   --lime-dim: #a3c214;
   --paper:    #EEF0FB;
@@ -62,9 +58,6 @@ body {
 a { text-decoration: none; }
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 ::selection { background: var(--periwinkle); color: #fff; }
-/* ═══════════════════════════════════════════════
-   TYPE SYSTEM — one sans family, differentiated only by weight/size.
-═══════════════════════════════════════════════ */
 section h2 { font-family: var(--f-display); font-weight: 500; font-size: 1.9rem; line-height: 1.12; letter-spacing: -0.015em; color: var(--ink) !important; margin-bottom: var(--sp-3); }
 section h3 { font-family: var(--f-display); font-weight: 600; font-size: 1.2rem; line-height: 1.3; letter-spacing: -0.005em; color: var(--ink) !important; }
 section p { font-family: var(--f-body); font-weight: 300; font-size: 1rem; line-height: 1.7; color: var(--ink-soft); }
@@ -75,9 +68,6 @@ section p { font-family: var(--f-body); font-weight: 300; font-size: 1rem; line-
 }
 .prose-max { max-width: 68ch; }
 .seal-mark { display: none; }
-/* ═══════════════════════════════════════════════
-   LAYOUT
-═══════════════════════════════════════════════ */
 .bleed {
   width: 100vw; position: relative;
   left: 50%; right: 50%;
@@ -88,9 +78,6 @@ section p { font-family: var(--f-body); font-weight: 300; font-size: 1rem; line-
   margin: 0 auto;
   padding-left: var(--px); padding-right: var(--px);
 }
-/* ═══════════════════════════════════════════════
-   NAV
-═══════════════════════════════════════════════ */
 nav {
   position: fixed; top: 0;
   width: 100vw; left: 50%; margin-left: -50vw;
@@ -123,9 +110,6 @@ nav {
   transform-origin: left center;
   transition: transform 0.22s ease, background var(--t);
 }
-/* ═══════════════════════════════════════════════
-   REVIEWS — mobile carousel + desktop grid
-═══════════════════════════════════════════════ */
 .reviews-bg { background: var(--paper); }
 .reviews-carousel-outer { position: relative; max-width: 500px; margin: 0 auto; }
 .reviews-carousel { display: flex; overflow-x: scroll; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -171,10 +155,17 @@ nav {
 .mobile-menu.open { display: flex; }
 .mobile-menu a, .mobile-menu a:visited { color: var(--ink-soft) !important; font-family: var(--f-body); font-size: 1.05rem; font-weight: 500; padding: 14px 0; border-bottom: 1px solid var(--line); transition: color var(--t); text-align: left; }
 .mobile-menu a:hover, .mobile-menu a:visited:hover { color: var(--ink) !important; }
-/* ═══════════════════════════════════════════════
-   HERO — full-bleed photo, subtle bottom scrim, text sits low and
-   left, echoing the product-photography hero on marklevinson.com.
-═══════════════════════════════════════════════ */
+.breadcrumb-bar { position: relative; z-index: 1; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; max-width: 1400px; margin: 0 auto; padding: 0 var(--px) 14px; font-family: var(--f-body); font-size: 0.78rem; font-weight: 500; letter-spacing: 0.01em; }
+.breadcrumb a { color: rgba(255,255,255,0.72) !important; transition: color var(--t); }
+.breadcrumb a:hover { color: #fff !important; }
+.breadcrumb-sep { color: rgba(255,255,255,0.42); }
+.breadcrumb-current { color: rgba(255,255,255,0.9); }
+nav.scrolled .breadcrumb a { color: var(--ink-soft) !important; }
+nav.scrolled .breadcrumb a:hover { color: var(--ink) !important; }
+nav.scrolled .breadcrumb-sep { color: var(--muted); }
+nav.scrolled .breadcrumb-current { color: var(--ink-soft); }
+nav.scrolled .breadcrumb-bar { display: none; }
 .hero { position: relative; display: flex; align-items: center; height: 100svh; min-height: 100svh; padding: 0; }
 .hero-photo { position: absolute; inset: 0; z-index: 0; }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; background: linear-gradient(135deg, #2a2140, #0B0A10); }
@@ -225,30 +216,18 @@ nav {
 .fu:nth-child(3){animation-delay:0.25s;} .fu:nth-child(4){animation-delay:0.35s;}
 .fu:nth-child(5){animation-delay:0.45s;} .fu:nth-child(6){animation-delay:0.55s;}
 @keyframes fu { to { opacity:1; transform:translateY(0); } }
-/* ═══════════════════════════════════════════════
-   SHARED
-═══════════════════════════════════════════════ */
 .py-section { padding: 48px 0; }
 @media (min-width: 768px) { .py-section { padding: var(--sp-6) 0; } }
 .lbl { display: block; font-family: var(--f-body); font-weight: 700; font-size: 0.72rem; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--periwinkle) !important; margin-bottom: var(--sp-2); }
 .h2 { margin-bottom: 0; }
 .sub { font-family: var(--f-body); font-size: 1.05rem; color: var(--ink-soft) !important; line-height: 1.8; font-weight: 300; max-width: 68ch; margin-top: var(--sp-3); }
-/* ═══════════════════════════════════════════════
-   INTRO
-═══════════════════════════════════════════════ */
 .intro-bg { background: var(--paper); }
 .intro-grid { max-width: 100%; margin: 0; position: relative; }
 .intro-text p { font-family: var(--f-body); font-size: 1rem; color: var(--ink-soft); line-height: 1.9; font-weight: 300; margin-bottom: var(--sp-3); }
 .intro-text p:last-child { margin-bottom: 0; }
 .intro-text strong { color: var(--ink); font-weight: 600; }
-/* ═══════════════════════════════════════════════
-   CONTEXTUAL LINK STYLE
-═══════════════════════════════════════════════ */
 .ctx-link { font-family: var(--f-body); color: var(--ink) !important; text-decoration: underline; text-decoration-color: var(--periwinkle); text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 600; transition: color var(--t), text-decoration-color var(--t); }
 .ctx-link:hover { color: var(--periwinkle) !important; text-decoration-color: var(--periwinkle); }
-/* ═══════════════════════════════════════════════
-   SERVICES — photo-led category cards
-═══════════════════════════════════════════════ */
 .services-bg { background: var(--paper); }
 .services-hd { text-align: left; margin-bottom: var(--sp-hd); max-width: 760px; }
 .services-slider { position: relative; }
@@ -319,16 +298,10 @@ nav {
 .services-progress { display: flex; gap: 4px; margin-top: 16px; padding: 0 8px; }
 .services-progress-seg { flex: 1; height: 7px; border-radius: 4px; background: var(--muted); opacity: 0.4; transition: background var(--t), opacity var(--t); }
 .services-progress-seg.active { background: var(--periwinkle); opacity: 1; }
-/* ═══════════════════════════════════════════════
-   IMAGE SLOTS — full-width photographs, plain
-═══════════════════════════════════════════════ */
 .img-slot { padding: 0; background: var(--dark); }
 .img-slot-inner { width: 100%; overflow: hidden; position: relative; }
 .img-slot-inner.h-md { height: 340px; }
 .img-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to top, rgba(6,5,10,0.5) 0%, transparent 50%); }
-/* ═══════════════════════════════════════════════
-   WHY US — plain, on white
-═══════════════════════════════════════════════ */
 .why-bg { background: var(--paper); }
 .why-list { list-style: none; display: flex; flex-direction: column; gap: 0; margin-top: var(--sp-hd); max-width: 600px; }
 .why-item { display: flex; gap: 16px; align-items: flex-start; padding: var(--sp-3) 0; border-top: 1px solid var(--line); }
@@ -341,9 +314,6 @@ nav {
 .metric { background: var(--paper); border: none; border-radius: 0; padding: var(--sp-3) var(--sp-2); text-align: left; min-width: 0; overflow: hidden; }
 .metric-num { font-family: var(--f-body) !important; font-weight: 600; color: var(--ink) !important; line-height: 1; word-break: break-word; font-size: 1.3rem; }
 .metric-lbl { font-size: 0.75rem; color: var(--muted) !important; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.4; word-break: break-word; font-family: var(--f-body); }
-/* ═══════════════════════════════════════════════
-   COVERAGE — plain outline grid, on pale grey
-═══════════════════════════════════════════════ */
 .coverage-bg { background: var(--paper-2); }
 .coverage-hd { text-align: left; margin-bottom: var(--sp-hd); }
 .coverage-hd .sub { max-width: 520px; margin: var(--sp-3) 0 0; }
@@ -351,11 +321,9 @@ nav {
 .town { display: flex; align-items: center; justify-content: flex-start; background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 12px 14px; text-align: left; font-family: var(--f-body); font-size: 0.88rem; color: var(--ink-soft) !important; font-weight: 500; transition: border-color var(--t), color var(--t), background var(--t); }
 .town .town-arrow { display: none; }
 .town:hover { border-color: var(--periwinkle); color: var(--periwinkle) !important; background: #fff; }
+.town-current, .town-current:hover { background: var(--periwinkle); border-color: var(--periwinkle); color: #fff !important; cursor: default; }
 .coverage-note { text-align: left; font-size: 0.95rem; color: var(--muted) !important; line-height: 1.7; font-family: var(--f-body); max-width: 68ch; margin: 0; }
 .coverage-note a { color: var(--periwinkle) !important; font-weight: 600; text-decoration: underline; }
-/* ═══════════════════════════════════════════════
-   CONTACT — plain, on white
-═══════════════════════════════════════════════ */
 .contact-bg { background: var(--paper); }
 .contact-phone-num { display: block; font-family: var(--f-body) !important; font-size: clamp(2rem, 7vw, 3rem); font-weight: 600; color: var(--ink) !important; letter-spacing: -0.02em; margin: 22px 0 6px; }
 .contact-sub-note { font-family: var(--f-body); font-size: 0.95rem; color: var(--muted) !important; margin-bottom: 32px; line-height: 1.6; }
@@ -364,9 +332,6 @@ nav {
 .contact-detail strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--ink) !important; margin-bottom: 3px; font-family: var(--f-body); text-transform: none; letter-spacing: 0; }
 .contact-detail p { font-size: 0.9rem; color: var(--ink-soft) !important; line-height: 1.6; font-family: var(--f-body); font-weight: 300; }
 .contact-left-col { margin-bottom: 48px; }
-/* ═══════════════════════════════════════════════
-   FAQ
-═══════════════════════════════════════════════ */
 .faq-bg { background: var(--paper); }
 .faq-hd { text-align: left; margin-bottom: var(--sp-hd); }
 .faq-hd .sub { max-width: 560px; margin: var(--sp-3) 0 0; }
@@ -387,9 +352,6 @@ nav {
 @media (prefers-reduced-motion: reduce) { .faq-item.open .faq-answer { animation: none; } }
 @keyframes faqFade { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: translateY(0); } }
 .faq-answer a { color: var(--periwinkle); text-decoration: underline; }
-/* ═══════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════ */
 .footer-bg { background: var(--paper); border-top: 1px solid var(--line); }
 .footer-inner { padding: 40px 0; text-align: left; }
 .footer-logo { font-family: var(--f-body) !important; font-weight: 700 !important; font-size: 1.05rem; color: var(--ink) !important; margin-bottom: 18px; letter-spacing: 0.02em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.3em; }
@@ -398,9 +360,6 @@ nav {
 .footer-links a, .footer-links a:visited { font-family: var(--f-body); font-size: 0.85rem; color: var(--muted) !important; transition: color var(--t); }
 .footer-links a:hover, .footer-links a:visited:hover { color: var(--periwinkle) !important; }
 .footer-copy { font-family: var(--f-body); font-size: 0.8rem; color: var(--muted) !important; line-height: 1.6; }
-/* ═══════════════════════════════════════════════
-   WHATSAPP — untouched, do not restyle
-═══════════════════════════════════════════════ */
 .whatsapp-btn {
   position: fixed; bottom: 30px; right: 24px; z-index: 999;
   width: 56px; height: 56px; background: #25D366; border-radius: 50%;
@@ -410,9 +369,6 @@ nav {
 }
 .whatsapp-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
 .whatsapp-btn svg { width: 30px; height: 30px; fill: #fff; }
-/* ═══════════════════════════════════════════════
-   PROBLEMS (long-form)
-═══════════════════════════════════════════════ */
 .problems-bg { background: var(--paper); }
 .problems-hd { text-align: left; margin-bottom: var(--sp-hd); }
 .problems-hd .sub { max-width: 600px; margin: var(--sp-3) 0 0; }
@@ -436,9 +392,6 @@ nav {
 .prose-cta .btn-primary:hover::before { background: var(--lime); }
 @media (min-width: 768px) { .prose-img img { height: 480px; } }
 @media (min-width: 1025px) { .prose-img img { height: 580px; } }
-/* ═══════════════════════════════════════════════
-   MOBILE < 768px
-═══════════════════════════════════════════════ */
 @media (max-width: 767px) {
   .hero { align-items: flex-end; }
   .hero-photo::after { background: linear-gradient(to top, rgba(10,10,14,0.75) 0%, rgba(10,10,14,0.5) 25%, rgba(10,10,14,0.2) 45%, rgba(10,10,14,0) 65%); }
@@ -461,9 +414,6 @@ nav {
 @media (max-width: 767px) and (max-height: 700px) {
   .hero-panel-inner { padding-bottom: 12vh; }
 }
-/* ═══════════════════════════════════════════════
-   TABLET 768px–1024px
-═══════════════════════════════════════════════ */
 @media (min-width: 768px) {
   :root { --px: 32px; --sp-hd: 48px; }
   .hero-desc { font-size: 1.15rem; }
@@ -472,9 +422,6 @@ nav {
   .metric { padding: var(--sp-4) var(--sp-3); }
   .contact-phone-num { font-size: 2.2rem !important; }
 }
-/* ═══════════════════════════════════════════════
-   DESKTOP ≥ 1025px
-═══════════════════════════════════════════════ */
 @media (min-width: 1025px) {
   :root { --px: 60px; --sp-hd: 64px; }
   .hamburger { display: none; }
@@ -550,12 +497,9 @@ nav {
     +351 923 272 806
    </a>
    <button class="hamburger" id="hamburger" aria-label="Open menu">
-    <span>
-    </span>
-    <span>
-    </span>
-    <span>
-    </span>
+    <span></span>
+    <span></span>
+    <span></span>
    </button>
    <ul class="nav-links">
     <li>
@@ -607,6 +551,13 @@ nav {
     Gallery
    </a>
   </div>
+  <div class="breadcrumb-bar" role="navigation" aria-label="Breadcrumb">
+   <div class="breadcrumb">
+    <a href="https://electricianalgarve.com">Home</a>
+    <span class="breadcrumb-sep" aria-hidden="true">/</span>
+    <span class="breadcrumb-current" aria-current="page">Faro</span>
+   </div>
+  </div>
  </nav>
  <!-- HERO -->
  <section class="hero bleed" id="home">
@@ -628,7 +579,7 @@ nav {
      </em>
      <br>
      <span>
-      in the Algarve
+      in Faro
      </span>
     </h1>
     <p class="hero-desc fu">
@@ -669,7 +620,6 @@ nav {
    </div>
   </div>
  </section>
- <!-- TRUST BAR -->
  <!-- REVIEWS -->
  <section class="reviews-bg bleed py-section" id="reviews">
   <div class="wrap">
@@ -681,7 +631,6 @@ nav {
      Real Reviews from Algarve Homeowners
     </h2>
    </div>
-   <!-- Mobile carousel -->
    <div class="reviews-carousel-outer">
     <div class="reviews-carousel" id="reviewsCarousel">
      <div class="reviews-slide">
@@ -700,7 +649,6 @@ nav {
      <button class="reviews-dot" onclick="goToSlide(2)" aria-label="Go to review 3"></button>
     </div>
    </div>
-   <!-- Desktop grid -->
    <div class="reviews-grid-desktop">
     <div class="reviews-col">
      <img src="google-review-2.webp" loading="lazy" alt="5 star Google review for Algarve Electric">
@@ -722,10 +670,10 @@ nav {
      What We Do
     </div>
     <h2 class="h2">
-     Electrical Services for Algarve Expats and Property Owners
+     Electrical Services for Faro Expats and Property Owners
     </h2>
     <p class="sub">
-     From emergency callouts to complete rewires, our English-speaking electrician handles every job across the Algarve with professionalism and care.
+     From emergency callouts to complete rewires, our English-speaking electrician handles every job in Faro and across the Algarve with professionalism and care.
     </p>
    </div>
    <div class="services-slider">
@@ -738,7 +686,7 @@ nav {
     <div class="services-grid" id="servicesGrid">
     <div class="card">
      <div class="card-img">
-      <img src="electrical-repairs-done-algarve-mobile.webp" loading="lazy" alt="General electrical repairs Algarve">
+      <img src="electrical-repairs-done-algarve-mobile.webp" loading="lazy" alt="General electrical repairs Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -752,7 +700,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="villa-rewiring-done-algarve-mobile.webp" loading="lazy" alt="Full villa rewiring Algarve">
+      <img src="villa-rewiring-done-algarve-mobile.webp" loading="lazy" alt="Full villa rewiring Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -766,7 +714,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="solar-panel-installed-algarve-mobile.webp" loading="lazy" alt="Electrician servicing a rooftop solar panel mount in the Algarve">
+      <img src="solar-panel-installed-algarve-mobile.webp" loading="lazy" alt="Electrician servicing a rooftop solar panel mount in Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -780,7 +728,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="ac-units-installed-algarve-mobile.webp" loading="lazy" alt="Air conditioning condenser units on an Algarve property rooftop">
+      <img src="ac-units-installed-algarve-mobile.webp" loading="lazy" alt="Air conditioning condenser units on a Faro property">
      </div>
      <div class="card-body">
       <h3>
@@ -794,7 +742,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="pool-and-garden-electrics-algarve-mobile.webp" loading="lazy" alt="Pool and garden electrics Algarve">
+      <img src="pool-and-garden-electrics-algarve-mobile.webp" loading="lazy" alt="Pool and garden electrics Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -808,7 +756,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="emergency-callouts-algarve-mobile.webp" loading="lazy" alt="Emergency electrician Algarve">
+      <img src="emergency-callouts-algarve-mobile.webp" loading="lazy" alt="Emergency electrician Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -822,7 +770,7 @@ nav {
     </div>
     <div class="card">
      <div class="card-img">
-      <img src="ev-charging-algarve-mobile.webp" loading="lazy" alt="EV charger installation Algarve">
+      <img src="ev-charging-algarve-mobile.webp" loading="lazy" alt="EV charger installation Faro">
      </div>
      <div class="card-body">
       <h3>
@@ -836,7 +784,7 @@ nav {
     </div>
     </div>
    </div>
-   <div class="services-progress" id="servicesProgress">
+   <div class="services-progress">
     <span class="services-progress-seg active"></span>
     <span class="services-progress-seg"></span>
     <span class="services-progress-seg"></span>
@@ -844,6 +792,132 @@ nav {
     <span class="services-progress-seg"></span>
     <span class="services-progress-seg"></span>
     <span class="services-progress-seg"></span>
+   </div>
+  </div>
+ </section>
+ <!-- LOCAL INTRO -->
+ <section class="intro-bg bleed py-section">
+  <div class="wrap">
+   <div style="text-align: left; margin-bottom: var(--sp-hd);">
+    <div class="lbl">
+     Faro
+    </div>
+    <h2 class="h2">
+     Your English-Speaking Electrician in Faro
+    </h2>
+   </div>
+   <div class="intro-grid">
+    <div class="intro-text">
+     <p>
+      Faro is different from every other place we cover. As the Algarve's district capital and home to the region's only international airport, it's a genuine working city — a historic centre around the Baixa, a university, and commercial streets with restaurants, offices and retail, alongside a large permanent expat community rather than a seasonal resort crowd. The person calling us in Faro is as likely to be a café owner with a kitchen circuit that's just tripped mid-service as
+      <strong>
+       a homeowner in a 1970s apartment block
+      </strong>
+      wondering why the lights keep going out.
+     </p>
+     <p>
+      The property stock reflects that mix. Faro's university and its role as the district capital mean a meaningful share of the city's housing is rented rather than owner-occupied, much of it in multi-storey apartment buildings in the city centre going back to the 1960s and 70s. Move out toward Estoi, Santa Bárbara de Nexe, Conceição or Montenegro, and further still toward
+      <a href="/sao-bras-de-alportel" class="ctx-link">
+       São Brás de Alportel
+      </a>
+      , and you're into modern villas and rural quintas on a completely different kind of installation. We work across all of it — city apartment, rental property, commercial unit or countryside villa — everything explained and carried out in English.
+     </p>
+     <p>
+      Older buildings in the historic centre and the surrounding residential streets tend to share the same issues — wiring and fuse boards that were adequate when the building went up but have never been reassessed since, and consumer units that were never designed for the number of appliances a modern household runs at once. We start by finding out exactly what's there, explain it in plain English, and carry out the repair or
+      <a href="/full-villa-rewiring" class="ctx-link">
+       rewire
+      </a>
+      properly rather than patching around the underlying problem.
+     </p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <!-- PROBLEMS -->
+ <section class="problems-bg bleed py-section" id="problems">
+  <div class="wrap">
+   <div class="problems-hd">
+    <div class="lbl">
+     What We Fix
+    </div>
+    <h2 class="h2">
+     Common Electrical Problems in Faro Properties
+    </h2>
+    <p class="sub">
+     From older city-centre apartments and commercial units to villas in the surrounding parishes, these are the calls we get most often in Faro. Describe what you're seeing and we'll tell you what it is and get someone to you.
+    </p>
+   </div>
+   <div class="prose-block">
+    <h3>
+     Older Apartments and Buildings in Faro's City Centre
+    </h3>
+    <p>
+     Faro's Baixa and the residential streets around it have a
+     <strong>
+      substantial number of multi-storey apartment buildings and townhouses built between the 1960s and the 1980s
+     </strong>
+     , and a lot of them have electrical installations that have never been formally reassessed since. Aluminium wiring in place of copper, ceramic fuse carriers instead of a modern RCD-protected consumer unit, and private installations extended piecemeal over the decades — an extra socket here, a converted room there — are all common finds. Unlike a standalone villa, apartment electrical work in an older Faro building also means working out the boundary between what belongs to the flat and what's part of the building's shared electrical infrastructure. Get that wrong and either the fault doesn't actually get resolved, or someone ends up paying to fix something that was never their responsibility. We assess the installation properly, explain clearly which is which, and carry out the repair or
+     <a href="/full-villa-rewiring" class="ctx-link">
+      full rewire
+     </a>
+     to bring the property up to a safe, modern standard — certified where Portuguese regulations require it.
+    </p>
+    <h3>
+     Commercial Electrical Work — Restaurants, Offices and Retail
+    </h3>
+    <p>
+     Faro is the one location we cover with a genuine commercial property market alongside its residential one, and commercial electrical work carries different demands to a house or apartment. A restaurant or café kitchen runs heavy, continuous load — extract fans, refrigeration, dishwashers and cooking equipment often drawing on
+     <strong>
+      three-phase power
+     </strong>
+     , all running at once during service. A fault in that kind of setup isn't just an inconvenience — a tripped circuit or a dead socket mid-service is a direct loss of income for as long as it takes to fix. Office and retail units in some of Faro's older buildings were specified decades ago for a fraction of the electrical demand a modern business places on them — air conditioning, IT equipment and point-of-sale systems all added over time onto a supply that was never sized for it. We carry out
+     <a href="/general-electrical-repairs" class="ctx-link">
+      fault diagnosis and electrical repairs
+     </a>
+     for Faro businesses, working to current Portuguese commercial electrical standards and certifying the work where regulations require it. If you're fitting out a new commercial unit or taking over an existing premises and aren't sure the electrical supply is adequate, it's worth having it assessed before you commit to anything.
+    </p>
+    <h3>
+     Villas and Rural Properties Around Estoi and Santa Bárbara de Nexe
+    </h3>
+    <p>
+     Outside the city, Faro's surrounding parishes — Estoi, Santa Bárbara de Nexe, Conceição and Montenegro — have a mix of older quintas and newer-build villas, many with
+     <a href="/pool-and-garden-electrics" class="ctx-link">
+      pools and garden electrics
+     </a>
+     that need proper outdoor-rated wiring. A tripping fuse box when the
+     <a href="/air-conditioning-installation" class="ctx-link">
+      air conditioning
+     </a>
+     kicks in usually means the circuit is undersized for the property's current demand — very common where a villa's electrics were installed for a much smaller load than it's carrying now. On rural properties, we also occasionally find the supply itself is struggling, which sometimes means liaising with E-REDES (the network operator that runs the actual distribution grid, not EDP, who just bill for the electricity used) to get the connection itself addressed — we'll tell you plainly if that's what's needed rather than just patching around it.
+    </p>
+    <h3>
+     Faro Landlords and Multi-Property Owners
+    </h3>
+    <p>
+     With a good share of Faro's housing in rental use, landlords with older Faro properties are under increasing pressure to bring installations up to a standard tenants and insurers expect. A consumer unit fitted into a 1970s Faro apartment was sized for a couple of lamps and a small heater — the same flat now running air conditioning, a washing machine, a dishwasher and several device chargers at once will trip repeatedly, and that's a
+     <strong>
+      capacity problem rather than a simple fault
+     </strong>
+     . We upgrade undersized distribution boards to modern RCD-protected consumer units correctly rated for the property's actual load. For landlords managing more than one Faro rental property, the same assessment and upgrade work can be scoped and scheduled across the portfolio rather than treated as separate one-off jobs.
+    </p>
+    <h3>
+     Just Moved to or Renting in Faro
+    </h3>
+    <p>
+     We regularly help people who've
+     <strong>
+      just moved into a Faro property and aren't sure the wiring is safe
+     </strong>
+     — or who've taken on a rental with no electricity and don't know where to start. We come out, diagnose exactly what's going on, and explain it in plain English — no jargon, no guesswork, and no promises we can't back up about formal paperwork we don't provide. If the property needs work, we tell you what and why; if it's fine, we tell you that too.
+    </p>
+   </div>
+   <div class="prose-cta">
+    <p>
+     Faro property issue? Call us and describe what you're seeing — we'll get someone to you fast.
+    </p>
+    <a href="tel:+351923272806" class="btn-primary">
+     +351 923 272 806
+    </a>
    </div>
   </div>
  </section>
@@ -856,10 +930,10 @@ nav {
       Why Choose Us
      </div>
      <h2 class="h2">
-      Why Algarve Expats Trust Our Electrician
+      Why Faro Expats and Businesses Trust Our Electrician
      </h2>
      <p class="sub">
-      Finding a reliable, English-speaking tradesman in Portugal is one of the biggest challenges expats face. We solve that completely.
+      Finding a reliable, English-speaking electrician in Faro is harder than it should be. We make it simple.
      </p>
      <ul class="why-list">
       <li class="why-item">
@@ -871,7 +945,6 @@ nav {
        </div>
        <div>
         <h4>
-         <span class="seal-mark"></span>
          No Language Barrier — Ever
         </h4>
         <p>
@@ -889,11 +962,10 @@ nav {
        </div>
        <div>
         <h4>
-         <span class="seal-mark"></span>
-         Licensed &amp; Experienced
+         Licensed &amp; Certified Where It Matters
         </h4>
         <p>
-         Our electrician is fully licensed with years of hands-on experience across Algarve properties — from routine repairs to full villa rewires.
+         Our electrician is fully licensed, with years of hands-on experience across Faro and Algarve properties. Where Portuguese regulations require certified sign-off — rewires, consumer unit upgrades, commercial installations — that work is completed and documented accordingly.
         </p>
        </div>
       </li>
@@ -906,7 +978,6 @@ nav {
        </div>
        <div>
         <h4>
-         <span class="seal-mark"></span>
          Transparent Pricing
         </h4>
         <p>
@@ -923,23 +994,10 @@ nav {
        </div>
        <div>
         <h4>
-         <span class="seal-mark"></span>
-         Covering the Entire Algarve
+         Faro Property Specialists
         </h4>
         <p>
-         From
-         <a href="/lagos" class="ctx-link">
-          Lagos
-         </a>
-         to
-         <a href="/tavira" class="ctx-link">
-          Tavira
-         </a>
-         ,
-         <a href="/vilamoura" class="ctx-link">
-          Vilamoura
-         </a>
-         to the Serra — including remote rural properties and private condominium estates.
+         From older city-centre apartment blocks and commercial units to villas around Estoi and Santa Bárbara de Nexe, we know Faro's property stock — residential and commercial — and what it typically needs.
         </p>
        </div>
       </li>
@@ -958,308 +1016,17 @@ nav {
        <div class="metric-lbl">English Speaking</div>
       </div>
       <div class="metric">
-       <div class="metric-num">Local</div>
+       <div class="metric-num">Faro</div>
        <div class="metric-lbl">Specialist Electrician</div>
       </div>
      </div>
     </div>
     <div class="why-img" style="border-radius: 12px; overflow: hidden; margin-top: 40px;">
-     <img src="consumer-unit-fixed-algarve.webp" alt="Repaired consumer unit and circuit breakers in an Algarve property" loading="lazy">
+     <img src="consumer-unit-fixed-algarve.webp" alt="Repaired consumer unit and circuit breakers in a Faro property" loading="lazy">
     </div>
    </div>
   </div>
  </section>
- <!-- INTRO -->
- <section class="intro-bg bleed py-section">
-  <div class="wrap">
-   <div style="text-align: left; margin-bottom: var(--sp-hd);">
-    <div class="lbl">
-     The Algarve
-    </div>
-    <h2 class="h2">
-     Your English Speaking Electrician in the Algarve
-    </h2>
-   </div>
-   <div class="intro-grid">
-    <div class="intro-text">
-     <p>
-      The Algarve is home to one of Europe's largest expat communities — with thousands of British, Irish, Dutch and German residents settled across
-      <a href="/faro" class="ctx-link">
-       Faro
-      </a>
-      ,
-      <a href="/albufeira" class="ctx-link">
-       Albufeira
-      </a>
-      ,
-      <a href="/vilamoura" class="ctx-link">
-       Vilamoura
-      </a>
-      ,
-      <a href="/lagos" class="ctx-link">
-       Lagos
-      </a>
-      and beyond.
-     Finding a reliable, English-speaking tradesman in Portugal is one of the biggest frustrations expats face. We solve that completely.
-     </p>
-     <p>
-      Whether you need an
-      <a href="/emergency-callouts" class="ctx-link">
-       emergency electrician
-      </a>
-      near you in the Algarve, a
-      <a href="/full-villa-rewiring" class="ctx-link">
-       full villa rewire
-      </a>
-      , solar panel repair, or help with
-      <a href="/pool-and-garden-electrics" class="ctx-link">
-       pool and garden electrics
-      </a>
-      , we cover every job across the entire region, communicated entirely in English throughout.
-     </p>
-     <p>
-      Algarve properties — particularly older villas and apartments built before the 1990s — often carry outdated electrical systems that need attention before a sale, rental or renovation. We diagnose wiring issues, fix faults, and carry out full rewires to bring older properties up to a safe, modern standard — all handled in English.
-     </p>
-    </div>
-   </div>
-  </div>
- </section>
- <!-- PROBLEMS — PROSE SECTION WITH IMAGE SLOTS -->
- <section class="problems-bg bleed py-section" id="problems">
-  <div class="wrap">
-   <div class="problems-hd">
-    <div class="lbl">
-     What we fix
-    </div>
-    <h2 class="h2">
-     Common Electrical Problems in Algarve Villas and Properties
-    </h2>
-    <p class="sub">
-     Expats and homeowners across the Algarve call us every day with these exact situations. If something's not working in your villa or apartment, describe what you're seeing — we'll tell you what it is and get someone to you fast.
-    </p>
-   </div>
-   <div class="prose-block">
-    <h3>
-     Lights, Switches and Outdoor Electrics Not Working
-    </h3>
-    <p>
-     If you're searching for an
-     <a href="/emergency-callouts" class="ctx-link">
-      electrician near me
-     </a>
-     in the Algarve, you've found us. The most common calls we receive are for
-     <a href="/general-electrical-repairs" class="ctx-link">
-      lights that have stopped working
-     </a>
-     — a ceiling light that's gone dead, LED downlights or spotlights that have gone out, lights flickering or flashing on and off, a dimmer switch that's stopped responding, or an entire room with no electricity and no power to any of the bulbs. We also deal regularly with
-     <strong>
-      light switches that simply don't work
-     </strong>
-     — a switch that does nothing when pressed, a switch that feels spongy or loose, a two-way switch where one works and one doesn't, or a switch that only responds intermittently. In older Algarve villas these faults are usually caused by loose wiring behind the switch rather than a failed switch itself, so replacing the switch rarely solves the problem.
-     <strong>
-      Ceiling fans
-     </strong>
-     are another common call — a ceiling fan that's stopped working, a fan that spins slowly or not at all, a fan making a grinding, clicking or humming noise, or a fan that wobbles on the ceiling. We also get regular calls for
-     <strong>
-      outdoor, garden and terrace lights not working
-     </strong>
-     — terrace lights gone dead, balcony lighting failed, exterior wall lights not coming on, security lights that no longer trigger, PIR motion sensor lights that stay on permanently or won't activate, and
-     <a href="/pool-and-garden-electrics" class="ctx-link">
-      pool lights
-     </a>
-     that have stopped working. Salt air and intense heat in the Algarve are hard on external fittings and wiring, and what looks like a dead light is often a corroded connection or failed junction box rather than a failed bulb.
-    </p>
-    <figure class="prose-img">
-     <picture>
-      <source media="(min-width: 1025px)" srcset="consumer-unit-upgrades-done-algarve-electric.webp">
-      <img src="consumer-unit-upgrades-algarve.webp" loading="lazy" alt="Consumer unit upgrade with circuit breakers in an Algarve property">
-     </picture>
-     <figcaption>Consumer unit upgrade, circuit breakers in an Algarve property.</figcaption>
-    </figure>
-    <h3>
-     Electric Gate Faults and Motor Repairs
-    </h3>
-    <p>
-     <strong>
-      Electric gates are one of the most urgent calls we receive across the Algarve
-     </strong>
-     — and one of the most disruptive when they fail. A gate that won't open or close, a gate motor that has stopped responding, a remote control that no longer works, a gate stuck open after a power cut, or a gate that opens but won't close again all leave your property either inaccessible or unsecured. We also regularly deal with gate intercoms that have failed, video intercoms with no image or sound, gate motors making grinding or clicking noises, gates that move erratically or stop mid-cycle, and solar-powered gate systems where the battery or controller has failed. In the Algarve, electric gates take a significant beating from extreme summer heat, salt air corrosion, and power surges during storms — and many of the gate systems on older villas and private estates haven't been properly serviced in years. Whether your gate has completely stopped working or is showing early warning signs, we diagnose and repair all makes and models of electric gate motors across the entire Algarve.
-    </p>
-    <figure class="prose-img">
-     <img src="electrical-circuit-breaker-installed-desktop.webp" loading="lazy" alt="Algarve villa consumer unit showing MCB circuit breakers">
-     <figcaption>Villa consumer unit, Algarve — MCB circuit breakers.</figcaption>
-    </figure>
-    <h3>
-     Dead Sockets, Bathroom Faults and Intercom Problems
-    </h3>
-    <p>
-     <strong>
-      Plug sockets and power points that have stopped working
-     </strong>
-     are among the most common faults we fix. A socket that's gone dead, a plug point that nothing will charge from, a
-     <a href="/general-electrical-repairs" class="ctx-link">
-      sparking socket
-     </a>
-     when you plug something in, a socket that feels warm or hot to the touch, or one with visible burn marks or discolouration — these all need immediate attention. A dead socket in a Portuguese property isn't always a tripped fuse — it can be a failed outlet, a loose neutral wire behind the wall, or a wiring fault that leaves the socket appearing dead while still being live.
-     <strong>
-      Doorbells and intercoms not working
-     </strong>
-     are also a regular call — a doorbell that produces no sound, a video doorbell with no power, or a wired intercom that's stopped functioning.
-     <strong>
-      Bathroom electrical faults
-     </strong>
-     are extremely common in older Algarve properties — a bathroom light that trips when switched on, a bathroom socket that's dead, an extractor fan that's failed or runs constantly, or moisture getting into fittings near showers or baths. Older Portuguese bathrooms frequently have non-compliant electrics near water sources, and damp conditions accelerate wiring deterioration quickly. If any socket feels hot or has scorch marks anywhere in the property, stop using it and
-     <a href="/emergency-callouts" class="ctx-link">
-      call us immediately
-     </a>
-     .
-    </p>
-    <figure class="prose-img">
-     <picture>
-      <source media="(min-width: 1025px)" srcset="electrical-rewiring-done-algarve-electric.webp">
-      <img src="electrical-rewiring-algarve.webp" loading="lazy" alt="Electrical rewiring in progress in an older Algarve property">
-     </picture>
-     <figcaption>Electrical rewiring in progress, an older Algarve property.</figcaption>
-    </figure>
-    <h3>
-     Fuse Box Tripping, Power Surges and AC Problems
-    </h3>
-    <p>
-     <a href="/general-electrical-repairs" class="ctx-link">
-      Fuse boxes that keep tripping
-     </a>
-     are something we deal with daily across
-     <a href="/faro" class="ctx-link">
-      Faro
-     </a>
-     ,
-     <a href="/albufeira" class="ctx-link">
-      Albufeira
-     </a>
-     ,
-     <a href="/lagos" class="ctx-link">
-      Lagos
-     </a>
-     ,
-     <a href="/portimao" class="ctx-link">
-      Portimão
-     </a>
-     ,
-     <a href="/tavira" class="ctx-link">
-      Tavira
-     </a>
-     and every corner of the Algarve. If your fuse board keeps switching off, a breaker keeps flipping, the electrics have tripped, the RCD won't stay on, you've blown a fuse, or you've lost electricity to one room or to the whole property — the cause is usually an overloaded circuit, a faulty appliance drawing too much current, or deteriorated wiring causing a short.
-     <strong>
-      Power surges
-     </strong>
-     are particularly common in the Algarve, especially in rural properties and after storms — you may notice lights going off momentarily, appliances resetting for no reason, or clocks flashing after a brief power cut. Related to this,
-     <strong>
-      power sags or dips
-     </strong>
-     — where lights briefly dim every time the fridge kicks in, the pool pump starts, or the air conditioning comes on — usually indicate an undersized electrical supply struggling under modern load.
-     <a href="/air-conditioning-installation" class="ctx-link">
-      AC tripping the fuse box
-     </a>
-     is one of the most frequent summer calls we receive, and is almost always solved with a dedicated circuit upgrade.
-     <strong>
-      Electric water heaters not working
-     </strong>
-     are another common fault — no hot water, the water heater tripping the electrics, or a boiler that keeps cutting out are all electrical issues we diagnose and fix. We identify the exact cause and fix it properly.
-    </p>
-    <figure class="prose-img">
-     <picture>
-      <source media="(min-width: 1025px)" srcset="solar-panel-installation-repair-desktop.webp">
-      <img src="solar-panel-installation-repair-algarve-electric-mobile.webp" loading="lazy" alt="Solar panels on a rooftop in the Algarve, repaired by a licensed electrician">
-     </picture>
-     <figcaption>Solar panels on a rooftop, repaired by a licensed electrician.</figcaption>
-    </figure>
-    <h3>
-     Burning Smells, Exposed Wiring and Electrical Emergencies
-    </h3>
-    <p>
-     If you notice a
-     <a href="/emergency-callouts" class="ctx-link">
-      burning smell from a socket
-     </a>
-     , plug, wall or ceiling, hear buzzing or crackling from a socket, switch or fuse board, or receive even a mild electric shock from a plug or appliance — treat it as an emergency. A burning smell from electrics means something is already overheating, and in an Algarve villa with older wiring that can escalate fast.
-     <strong>
-      Visibly damaged or exposed wiring
-     </strong>
-     is another warning sign we see regularly in older properties — burnt or discoloured cables, wires coming out of walls or ceilings, uncovered junction boxes left open after previous renovation work. These are never safe to leave. An
-     <strong>
-      unexpectedly high electricity bill
-     </strong>
-     that you can't explain is often a symptom of a wiring fault rather than a usage problem — a leaking circuit, a failing appliance drawing excessive current, or degraded insulation all cause invisible electricity drain. If you're looking to reduce those bills, our
-     <a href="/solar-panel-installation" class="ctx-link">
-      solar panels
-     </a>
-     can significantly reduce your energy costs.
-     <strong>
-      Storage heaters or panel heaters not working
-     </strong>
-     ,
-     <strong>
-      EV chargers that have stopped charging
-     </strong>
-     or won't communicate with the car, and
-     <strong>
-      smoke alarms or carbon monoxide detectors beeping or not functioning
-     </strong>
-     are all electrical faults we investigate and fix. We cover the entire Algarve for
-     <a href="/emergency-callouts" class="ctx-link">
-      emergency electrical faults
-     </a>
-     — responding quickly during working hours, and overnight every day of the week.
-    </p>
-    <figure class="prose-img">
-     <img src="power-socket-installation-algarve-portugal.webp" loading="lazy" alt="Portuguese plug sockets in Algarve property repaired by a licensed electrician">
-     <figcaption>Portuguese plug sockets, repaired by a licensed electrician.</figcaption>
-    </figure>
-    <h3>
-     Buying or Moving Into an Algarve Property
-    </h3>
-    <p>
-     We also regularly help expats who have
-     <strong>
-      just moved into a Portuguese property and aren't sure if the wiring is safe
-     </strong>
-     — or who have no electricity and don't know where to start. Many Algarve villas built before the 1990s lack RCD protection, have undersized consumer units, aluminium wiring, or a fuse blown somewhere in a system nobody has looked at in years — none of which meet current Portuguese electrical regulations. Whether you've just
-     bought a villa in the Algarve
-     and want the wiring checked over, you're
-     renting out a property
-     and want peace of mind that it's safe, or your property needs a
-     <a href="/full-villa-rewiring" class="ctx-link">
-      complete villa rewire
-     </a>
-     to bring it up to current Portuguese standards — we diagnose exactly what's going on and explain it in
-     <strong>
-      plain English
-     </strong>
-     , across the entire Algarve, with no jargon and no guesswork.
-    </p>
-   </div>
-   <div class="prose-cta">
-    <p>
-     Not sure what the problem is? Call us and describe what you're seeing — we'll diagnose it over the phone and get someone to you fast.
-    </p>
-    <a href="tel:+351923272806" class="btn-primary">
-     +351 923 272 806
-    </a>
-   </div>
-  </div>
- </section>
- <!-- IMAGE -->
- <div class="img-slot bleed">
-  <div class="img-slot-inner h-md">
-   <picture>
-    <source media="(min-width: 1025px)" srcset="solar-panel-installation-algarve-portugal.webp">
-
-    <img src="solar-panel-installation-quarteira.webp" loading="lazy" alt="Solar panel repair and maintenance on an Algarve villa rooftop">
-   </picture>
-   <div class="img-overlay">
-   </div>
-  </div>
- </div>
  <!-- COVERAGE -->
  <section class="coverage-bg bleed py-section" id="coverage">
   <div class="wrap">
@@ -1268,57 +1035,25 @@ nav {
      Service Area
     </div>
     <h2 class="h2">
-     We Cover the Entire Algarve
+     Areas We Cover Around Faro
     </h2>
     <p class="sub">
-     From the western tip to the eastern border — if you're in the Algarve, we're your electrician. Including rural properties and private estates.
+     We cover Faro city and the surrounding parishes, plus the rest of the Algarve.
     </p>
    </div>
    <div class="towns">
-    <a href="/albufeira" class="town">Albufeira<span class="town-arrow">→</span></a>
-    <a href="/alcoutim" class="town">Alcoutim<span class="town-arrow">→</span></a>
-    <a href="/aljezur" class="town">Aljezur<span class="town-arrow">→</span></a>
+    <div class="town town-current">Faro</div>
     <a href="/almancil" class="town">Almancil<span class="town-arrow">→</span></a>
-    <a href="/armacao-de-pera" class="town">Armação de Pêra<span class="town-arrow">→</span></a>
-    <a href="/carvoeiro" class="town">Carvoeiro<span class="town-arrow">→</span></a>
-    <a href="/castro-marim" class="town">Castro Marim<span class="town-arrow">→</span></a>
-    <a href="/faro" class="town">Faro<span class="town-arrow">→</span></a>
-    <a href="/lagoa" class="town">Lagoa<span class="town-arrow">→</span></a>
-    <a href="/lagos" class="town">Lagos<span class="town-arrow">→</span></a>
     <a href="/loule" class="town">Loulé<span class="town-arrow">→</span></a>
-    <a href="/monchique" class="town">Monchique<span class="town-arrow">→</span></a>
+    <a href="/sao-bras-de-alportel" class="town">São Brás de Alportel<span class="town-arrow">→</span></a>
     <a href="/olhao" class="town">Olhão<span class="town-arrow">→</span></a>
-    <a href="/portimao" class="town">Portimão<span class="town-arrow">→</span></a>
-    <a href="/quarteira" class="town">Quarteira<span class="town-arrow">→</span></a>
     <a href="/quinta-do-lago" class="town">Quinta do Lago<span class="town-arrow">→</span></a>
-    <a href="/sao-bras-de-alportel" class="town">São Brás<span class="town-arrow">→</span></a>
-    <a href="/silves" class="town">Silves<span class="town-arrow">→</span></a>
-    <a href="/tavira" class="town">Tavira<span class="town-arrow">→</span></a>
-    <a href="/vale-do-lobo" class="town">Vale do Lobo<span class="town-arrow">→</span></a>
-    <a href="/vila-real-de-santo-antonio" class="town">Vila Real<span class="town-arrow">→</span></a>
-    <a href="/vilamoura" class="town">Vilamoura<span class="town-arrow">→</span></a>
    </div>
    <p class="coverage-note">
-    Not sure if we cover your area?
-    <a href="#contact">
-     Send us a message
-    </a>
-    — we'll confirm straight away.
+    Outside these areas? <a href="https://www.electricianalgarve.com/#coverage">See our full Algarve coverage</a> — we cover the entire region.
    </p>
   </div>
  </section>
- <!-- IMAGE -->
- <div class="img-slot bleed">
-  <div class="img-slot-inner h-md">
-   <picture>
-    <source media="(min-width: 1025px)" srcset="ac-installation-repair-algarve-electric-desktop.webp">
-
-    <img src="ac-installation-repair-algarve-electric-mobile.webp" loading="lazy" alt="Air conditioning units repaired and serviced in an Algarve property">
-   </picture>
-   <div class="img-overlay">
-   </div>
-  </div>
- </div>
  <!-- FAQ -->
  <section class="faq-bg bleed py-section" id="faq">
   <div class="wrap">
@@ -1327,203 +1062,56 @@ nav {
      Common Questions
     </div>
     <h2 class="h2">
-     Frequently Asked Questions
+     Frequently Asked Questions — Faro
     </h2>
     <p class="sub">
-     Everything you need to know about our English-speaking electrical services across the Algarve.
+     Everything you need to know about our English-speaking electrical services in Faro.
     </p>
    </div>
    <div class="faq-list">
     <div class="faq-item">
      <button class="faq-question">
-      Do you cover the entire Algarve?
-      <span class="faq-icon">
-       +
-      </span>
+      Do you cover Faro city centre and the surrounding parishes?
+      <span class="faq-icon">+</span>
      </button>
      <div class="faq-answer">
-      Yes — we cover every town and city across the Algarve, from Lagos in the west to Vila Real de Santo António in the east. This includes rural properties, private estates and coastal resorts.
+      Yes — we cover Faro city, the historic centre, and the surrounding parishes including Estoi, Santa Bárbara de Nexe and Montenegro, plus nearby Almancil, Loulé, São Brás de Alportel and Olhão. If you're unsure whether we cover your specific address, call us and we'll confirm straight away.
      </div>
     </div>
     <div class="faq-item">
      <button class="faq-question">
-      Do you communicate entirely in English?
-      <span class="faq-icon">
-       +
-      </span>
+      My Faro apartment has old wiring — what's involved in sorting it out?
+      <span class="faq-icon">+</span>
      </button>
      <div class="faq-answer">
-      Yes — from your first enquiry to the completed job, everything is handled in English. No language barrier, no misunderstandings, no surprises on the bill.
+      We start by assessing the existing installation — checking the consumer unit, the wiring condition, and whether any circuits are overloaded. In an older apartment block, we also work out what's the flat's own installation and what's shared building infrastructure. From there we quote for the repair or rewire and carry it out.
      </div>
     </div>
     <div class="faq-item">
      <button class="faq-question">
-      How quickly can you respond to an enquiry?
-      <span class="faq-icon">
-       +
-      </span>
+      I've just moved into a Faro property — how do I know if the wiring is safe?
+      <span class="faq-icon">+</span>
      </button>
      <div class="faq-answer">
-      We aim to respond to all enquiries within a few hours during working days. For emergency callouts we are available every day 8pm–7am across the Algarve.
+      Many older Faro properties have wiring that's outdated by current standards — missing RCD protection, undersized consumer units, or aluminium wiring. We diagnose the system in plain English, giving you a clear picture of its condition and what, if anything, needs fixing.
      </div>
     </div>
     <div class="faq-item">
      <button class="faq-question">
-      Do you repair or maintain solar panels?
-      <span class="faq-icon">
-       +
-      </span>
+      Do you handle villa electrics around Estoi and Santa Bárbara de Nexe?
+      <span class="faq-icon">+</span>
      </button>
      <div class="faq-answer">
-      Yes. We repair and maintain existing solar energy systems on Algarve villas and properties, to Portuguese standards.
+      Yes — general repairs, full rewires, pool and garden electrics, and air conditioning circuit work on villas and rural properties throughout Faro's surrounding parishes.
      </div>
     </div>
     <div class="faq-item">
      <button class="faq-question">
-      My lights keep flickering in my Algarve villa — what does it mean?
-      <span class="faq-icon">
-       +
-      </span>
+      How quickly can you get to a Faro property?
+      <span class="faq-icon">+</span>
      </button>
      <div class="faq-answer">
-      Flickering lights in an Algarve property are usually caused by a loose connection, a failing light fitting, or a fault on the circuit. In older Portuguese villas it can also indicate outdated wiring that's struggling under modern electrical load. Loose connections left unattended are a fire risk. Call us and we'll come out to diagnose it as soon as we can.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      A plug socket has stopped working in my property — what should I do?
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      A dead socket in a Portuguese property is usually caused by a tripped circuit, a blown fuse, a faulty outlet, or loose wiring behind the wall. If the socket looks discoloured, feels warm, or sparks when you plug in, stop using it immediately and call us. We cover the full Algarve and get to you as quickly as we can.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      My fuse box keeps tripping in my Algarve home — is it dangerous?
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      A fuse box that keeps tripping is a sign that something is drawing more power than the circuit can handle. In older Algarve villas it can also mean the consumer unit is too small for modern electrical demand. We'll identify the cause and fix it properly.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      There's a burning smell coming from a socket or plug in my villa — what do I do?
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      A burning smell from a socket is a serious warning sign. Stop using that socket immediately and call us. This typically indicates a short circuit, overloaded wiring, or a damaged outlet — all of which are fire hazards. We treat burning smell calls as emergencies and prioritise them across the Algarve.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      I got a mild electric shock from a socket in my Portuguese property
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      Electric shocks from sockets are never normal and should always be investigated. In older Portuguese properties this is often caused by faulty earthing, degraded insulation, or ungrounded wiring. Even mild shocks can escalate quickly. Call us and we'll carry out a full inspection to find and fix the cause safely.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      My outdoor or garden lights have stopped working at my Algarve property
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      Outdoor and garden light faults in the Algarve are very common — salt air, heat, and heavy rain all take their toll on external fittings and wiring. Common causes include a tripped outdoor circuit, failed fittings, water ingress into junction boxes, or corroded connections. We repair and install all types of exterior and pool lighting across the Algarve.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      My air conditioning keeps tripping the fuse box in my Algarve villa
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      This is one of the most common issues we see in Algarve properties. It usually means the AC unit is on an underpowered circuit or sharing with too many other appliances. We can upgrade the circuit and install a dedicated supply for your AC — properly rated to Portuguese standards.
-     </div>
-    </div>
-    <div class="faq-item">
-     <button class="faq-question">
-      I've just moved into a Portuguese property — how do I know if the wiring is safe?
-      <span class="faq-icon">
-       +
-      </span>
-     </button>
-     <div class="faq-answer">
-      Many Algarve properties built before the 1990s have electrical systems that are outdated by current Portuguese standards — missing RCD protection, undersized consumer units, or aluminium wiring. We diagnose the system in plain English, giving you a clear picture of its condition and what, if anything, needs fixing.
-     </div>
-    </div>
-   </div>
-  </div>
- </section>
- <!-- CONTACT -->
- <section class="contact-bg bleed py-section" id="contact">
-  <div class="wrap">
-   <div class="contact-grid">
-    <div class="contact-left-col">
-     <div class="lbl">
-      Get In Touch
-     </div>
-     <h2 class="h2">
-      Request a Quote
-     </h2>
-     <p class="sub">
-      Tell us about your job and we'll get back to you quickly with a clear price — no obligation, no pressure.
-     </p>
-     <a href="tel:+351923272806" class="contact-phone-num">
-      +351 923 272 806
-     </a>
-     <p class="contact-sub-note">
-      Call us directly — we respond fast.
-     </p>
-     <div class="contact-detail">
-      <svg viewBox="0 0 24 24">
-       <path d="M12 3c-3.6 0-6.4 2.8-6.4 6.3C5.6 13.9 12 21 12 21s6.4-7.1 6.4-11.7C18.4 5.8 15.6 3 12 3z">
-       </path>
-       <circle cx="12" cy="9.3" r="2.1">
-       </circle>
-      </svg>
-      <div>
-       <strong>
-        Coverage Area
-       </strong>
-       <p>
-        Throughout the entire Algarve region — all towns and rural properties.
-       </p>
-      </div>
-     </div>
-     <div class="contact-detail">
-      <svg viewBox="0 0 24 24">
-       <circle cx="12" cy="12" r="8.5">
-       </circle>
-       <path d="M12 3.5v1.6M20.5 12h-1.6M12 20.5v-1.6M3.5 12h1.6">
-       </path>
-       <path d="M12 7.8V12l3 1.7">
-       </path>
-      </svg>
-      <div>
-       <strong>
-        Working Hours
-       </strong>
-       <p>
-        Monday – Friday: 9am – 6pm
-        <br>
-        Emergency callouts: 8pm – 7am, 7 days a week
-       </p>
-      </div>
+      We aim to respond to all enquiries within a few hours during working days. For emergencies we're available every day, 8pm–7am, across Faro and the wider Algarve.
      </div>
     </div>
    </div>
@@ -1535,14 +1123,11 @@ nav {
  "@context": "https://schema.org",
  "@type": "FAQPage",
  "mainEntity": [
-   {"@type":"Question","name":"Do you cover the entire Algarve?","acceptedAnswer":{"@type":"Answer","text":"Yes — we cover every town and city across the Algarve, from Lagos in the west to Vila Real de Santo António in the east. This includes rural properties, private estates and coastal resorts."}},
-   {"@type":"Question","name":"Do you communicate entirely in English?","acceptedAnswer":{"@type":"Answer","text":"Yes — from your first enquiry to the completed job, everything is handled in English. No language barrier, no misunderstandings, no surprises on the bill."}},
-   {"@type":"Question","name":"My lights keep flickering in my Algarve villa — what does it mean?","acceptedAnswer":{"@type":"Answer","text":"Flickering lights are usually caused by a loose connection, a failing light fitting, or a fault on the circuit. In older Portuguese villas it can indicate outdated wiring. Call us and we'll come out to diagnose it as soon as we can."}},
-   {"@type":"Question","name":"A plug socket has stopped working in my property — what should I do?","acceptedAnswer":{"@type":"Answer","text":"A dead socket is usually caused by a tripped circuit, a blown fuse, a faulty outlet, or loose wiring. If the socket feels warm or sparks when you plug in, stop using it immediately and call us."}},
-   {"@type":"Question","name":"My fuse box keeps tripping in my Algarve home — is it dangerous?","acceptedAnswer":{"@type":"Answer","text":"A fuse box that keeps tripping means something is drawing more power than the circuit can handle. In older Algarve villas the consumer unit may be too small for modern demand. We'll identify the cause and fix it properly."}},
-   {"@type":"Question","name":"There's a burning smell coming from a socket or plug in my villa — what do I do?","acceptedAnswer":{"@type":"Answer","text":"Stop using that socket immediately and call us. A burning smell from electrics is a serious warning sign — typically a short circuit, overloaded wiring, or a damaged outlet. We treat these as emergencies across the Algarve."}},
-   {"@type":"Question","name":"My air conditioning keeps tripping the fuse box in my Algarve villa","acceptedAnswer":{"@type":"Answer","text":"Very common in older Algarve villas. It usually means the AC is on an underpowered circuit. We can upgrade the circuit and install a dedicated supply — properly rated to Portuguese standards."}},
-   {"@type":"Question","name":"I've just moved into a Portuguese property — how do I know if the wiring is safe?","acceptedAnswer":{"@type":"Answer","text":"Many Algarve properties built before the 1990s have outdated electrical systems. We diagnose the system in plain English, giving you a clear picture of what needs fixing."}}
+   {"@type":"Question","name":"Do you cover Faro city centre and the surrounding parishes?","acceptedAnswer":{"@type":"Answer","text":"Yes — we cover Faro city, the historic centre, and the surrounding parishes including Estoi, Santa Bárbara de Nexe and Montenegro, plus nearby Almancil, Loulé, São Brás de Alportel and Olhão."}},
+   {"@type":"Question","name":"My Faro apartment has old wiring — what's involved in sorting it out?","acceptedAnswer":{"@type":"Answer","text":"We assess the existing installation — the consumer unit, wiring condition, and whether circuits are overloaded — work out what's the flat's own installation versus shared building infrastructure, then quote for the repair or rewire."}},
+   {"@type":"Question","name":"I've just moved into a Faro property — how do I know if the wiring is safe?","acceptedAnswer":{"@type":"Answer","text":"Many older Faro properties have outdated wiring — missing RCD protection, undersized consumer units, or aluminium wiring. We diagnose the system in plain English and explain what, if anything, needs fixing."}},
+   {"@type":"Question","name":"Do you handle villa electrics around Estoi and Santa Bárbara de Nexe?","acceptedAnswer":{"@type":"Answer","text":"Yes — general repairs, full rewires, pool and garden electrics, and air conditioning circuit work on villas and rural properties throughout Faro's surrounding parishes."}},
+   {"@type":"Question","name":"How quickly can you get to a Faro property?","acceptedAnswer":{"@type":"Answer","text":"We aim to respond to all enquiries within a few hours during working days. For emergencies we're available every day, 8pm–7am, across Faro and the wider Algarve."}}
  ]
 }
  </script>
@@ -1564,31 +1149,81 @@ nav {
   "addressCountry": "PT"
  },
  "areaServed": [
-  {"@type":"City","name":"Albufeira"},
-  {"@type":"City","name":"Alcoutim"},
-  {"@type":"City","name":"Aljezur"},
-  {"@type":"City","name":"Almancil"},
-  {"@type":"City","name":"Armação de Pêra"},
-  {"@type":"City","name":"Carvoeiro"},
-  {"@type":"City","name":"Castro Marim"},
   {"@type":"City","name":"Faro"},
-  {"@type":"City","name":"Lagoa"},
-  {"@type":"City","name":"Lagos"},
+  {"@type":"City","name":"Almancil"},
   {"@type":"City","name":"Loulé"},
-  {"@type":"City","name":"Monchique"},
-  {"@type":"City","name":"Olhão"},
-  {"@type":"City","name":"Portimão"},
-  {"@type":"City","name":"Quarteira"},
-  {"@type":"City","name":"Quinta do Lago"},
   {"@type":"City","name":"São Brás de Alportel"},
-  {"@type":"City","name":"Silves"},
-  {"@type":"City","name":"Tavira"},
-  {"@type":"City","name":"Vale do Lobo"},
-  {"@type":"City","name":"Vila Real de Santo António"},
-  {"@type":"City","name":"Vilamoura"}
+  {"@type":"City","name":"Olhão"},
+  {"@type":"City","name":"Quinta do Lago"}
  ]
 }
  </script>
+ <!-- BREADCRUMB SCHEMA -->
+ <script type="application/ld+json">
+  {
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.electricianalgarve.com/"},
+  {"@type":"ListItem","position":2,"name":"Faro","item":"https://www.electricianalgarve.com/faro"}
+ ]
+}
+ </script>
+ <!-- CONTACT -->
+ <section class="contact-bg bleed py-section" id="contact">
+  <div class="wrap">
+   <div class="contact-grid">
+    <div class="contact-left-col">
+     <div class="lbl">
+      Get In Touch
+     </div>
+     <h2 class="h2">
+      Request a Quote
+     </h2>
+     <p class="sub">
+      Tell us about your job in Faro and we'll get back to you quickly with a clear price — no obligation, no pressure.
+     </p>
+     <a href="tel:+351923272806" class="contact-phone-num">
+      +351 923 272 806
+     </a>
+     <p class="contact-sub-note">
+      Call us directly — we respond fast.
+     </p>
+     <div class="contact-detail">
+      <svg viewBox="0 0 24 24">
+       <path d="M12 3c-3.6 0-6.4 2.8-6.4 6.3C5.6 13.9 12 21 12 21s6.4-7.1 6.4-11.7C18.4 5.8 15.6 3 12 3z"></path>
+       <circle cx="12" cy="9.3" r="2.1"></circle>
+      </svg>
+      <div>
+       <strong>
+        Faro &amp; Surrounding Parishes
+       </strong>
+       <p>
+        Faro city, Estoi, Santa Bárbara de Nexe, Montenegro, and out to Almancil, Loulé, São Brás de Alportel and Olhão.
+       </p>
+      </div>
+     </div>
+     <div class="contact-detail">
+      <svg viewBox="0 0 24 24">
+       <circle cx="12" cy="12" r="8.5"></circle>
+       <path d="M12 3.5v1.6M20.5 12h-1.6M12 20.5v-1.6M3.5 12h1.6"></path>
+       <path d="M12 7.8V12l3 1.7"></path>
+      </svg>
+      <div>
+       <strong>
+        Working Hours
+       </strong>
+       <p>
+        Monday – Friday: 9am – 6pm
+        <br>
+        Emergency callouts: 8pm – 7am, 7 days a week
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
  <!-- FOOTER -->
  <footer class="footer-bg bleed">
   <div class="footer-inner">
@@ -1602,7 +1237,7 @@ nav {
     </div>
     <ul class="footer-links">
      <li>
-      <a href="https://electricianalgarve.com">
+      <a href="https://www.electricianalgarve.com/">
        Home
       </a>
      </li>
@@ -1639,8 +1274,7 @@ nav {
      <li>
       <a href="https://www.facebook.com/profile.php?id=61590370200975" target="_blank" rel="noopener" aria-label="Algarve Electric on Facebook" style="color: var(--muted); transition: color 0.22s ease; display: inline-flex; align-items: center;">
        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="display:block;">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
-        </path>
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
        </svg>
       </a>
      </li>
